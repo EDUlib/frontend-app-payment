@@ -227,12 +227,14 @@ class Checkout extends React.Component {
               />
             </button>
 
+            {/* Disable PayPal for EDUlib
             <PayPalButton
               onClick={this.handleSubmitPayPal}
               className={classNames('payment-method-button', { 'skeleton-pulse': loading })}
               disabled={submissionDisabled}
               isProcessing={payPalIsSubmitting}
             />
+            */}
 
             {/* Apple Pay temporarily disabled per REV-927  - https://github.com/openedx/frontend-app-payment/pull/256 */}
           </p>
