@@ -20,7 +20,6 @@ import AcceptedCardLogos from './assets/accepted-card-logos.png';
 import PaymentForm from './payment-form/PaymentForm';
 import StripePaymentForm from './payment-form/StripePaymentForm';
 import FreeCheckoutOrderButton from './FreeCheckoutOrderButton';
-import { PayPalButton } from '../payment-methods/paypal';
 import { ORDER_TYPES } from '../data/constants';
 
 class Checkout extends React.Component {
@@ -248,12 +247,7 @@ class Checkout extends React.Component {
               />
             </button>
 
-            <PayPalButton
-              onClick={this.handleSubmitPayPal}
-              className={classNames('payment-method-button', { 'skeleton-pulse': loading })}
-              disabled={submissionDisabled}
-              isProcessing={payPalIsSubmitting}
-            />
+            {/* Disable PayPal for EDUlib */}
 
             {/* Apple Pay temporarily disabled per REV-927  - https://github.com/openedx/frontend-app-payment/pull/256 */}
           </p>
