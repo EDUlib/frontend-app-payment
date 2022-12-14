@@ -60,7 +60,7 @@ LocalizedPrice.propTypes = {
 LocalizedPrice.defaultProps = {
   amount: undefined,
   conversionRate: 1,
-  currencyCode: 'USD',
+  currencyCode: 'CAD',
   showAsLocalizedCurrency: false,
   shouldRemoveFractionZeroDigits: false,
 };
